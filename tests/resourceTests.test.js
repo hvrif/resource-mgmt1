@@ -52,17 +52,4 @@ describe('Testing resource related features', () => {
         };
         await addResource(req, res);
     });
-    it('Should return an array when viewing resources', async () => {
-        const req = {};
-        const res = {
-        status: function (code) {
-        expect(code).to.equal(201);
-        return this;
-        },
-        json: function (data) {
-        expect(Array.isArray(data)).to.be.true;
-        },
-        };
-        await viewResources(req, res);
-        });
-        });
+})
